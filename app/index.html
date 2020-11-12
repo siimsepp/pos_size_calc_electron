@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'" />
+    <link rel="stylesheet" href="../assets/css/materialize.min.css" />    
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Position Size Calculator</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div id="main" class="card">
+            <div class="card-content">
+              <span class="card-title" id="title-line"></span>
+
+              <div class="input-field col s12">
+                <input type="text" name="risk" id="risk" />
+                <label for="risk">Risk (% of portfolio)</label>
+              </div>
+
+              <div class="input-field col s12">
+                <input type="text" name="portfolio" id="portfolio" />
+                <label for="portfolio">Portfolio size ($)</label>
+              </div>
+
+              <div class="input-field col s12">
+                <input type="text" name="price" id="price" />
+                <label for="price">Purchase price</label>
+              </div>
+
+              <div class="input-field col s12">
+                <input type="text" name="stop" id="stop" />
+                <label for="stop">Stop-loss price</label>
+              </div>
+
+              <button id="submit" class="btn waves-effect waves-light red">Submit</button>
+              <button id="clear-fields" class="btn waves-effect waves-light blue">Clear Fields</button>
+            </div>
+            <div id="results" class="card-action">
+              <span class="card-title">Position Size ($):</span>
+              <p id="result-number"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="description" class="hide-on-small-only text-justify font-weight-light"></div>
+    </div>
+
+    <script>require('../assets/js/jquery-3.2.1.js')</script>
+    <script>require('../assets/js/materialize.min.js')</script>
+    <script>require('../assets/js/bootstrap.min.js')</script>
+    <script>require('./index.js')</script>
+  </body>
+</html>
